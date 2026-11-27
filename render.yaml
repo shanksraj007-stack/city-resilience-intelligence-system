@@ -1,0 +1,30 @@
+# Render Blueprint — CRIS (single web service: API + frontend, plus Postgres)
+# Deploy: Render Dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: cris-app
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: UPLOAD_DIR
+        value: /app/uploads
+      - key: DEBUG
+        value: "false"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: JWT_REFRESH_SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: cris-db
+          property: connectionString
+
+databases:
+  - name: cris-db
+    databaseName: cris_db
+    user: cris
+    plan: free

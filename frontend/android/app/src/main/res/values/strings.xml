@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CRIS</string>
+    <string name="title_activity_main">CRIS</string>
+    <string name="package_name">gov.vijayamangalam.cris</string>
+    <string name="custom_url_scheme">gov.vijayamangalam.cris</string>
+</resources>

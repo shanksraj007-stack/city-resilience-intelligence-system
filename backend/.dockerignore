@@ -1,0 +1,16 @@
+# Backend Dockerignore
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+tests/
+cris.db
+*.db
+uploads/
+.env
+.git
+.gitignore
+*.log
+Dockerfile
+.dockerignore

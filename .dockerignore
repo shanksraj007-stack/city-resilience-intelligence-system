@@ -1,0 +1,17 @@
+**/node_modules
+**/dist
+**/__pycache__
+**/*.pyc
+**/.git
+**/.env
+frontend/android
+backend/cris.db
+*.db
+docs
+ai
+assets
+uploads
+database
+scripts
+docker
+*.apk
